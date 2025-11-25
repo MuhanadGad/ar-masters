@@ -1,0 +1,61 @@
+
+    <!-- <script>
+      const rotateDiv = document.querySelector(".rotate");
+      const tapToStart = document.getElementById("tapToStart");
+
+      function startOrientationCheck() {
+        window.addEventListener("deviceorientation", (ev) => {
+          // console.log(ev);
+          const { beta } = ev;
+          if (beta == null) return;
+
+          const inPortrait = window.matchMedia(
+            "(orientation: portrait)"
+          ).matches;
+          const isHorizontal = Math.abs(beta) > 70 && Math.abs(beta) < 110;
+
+          if (inPortrait && isHorizontal) {
+            rotateDiv.style.display = "flex";
+          } else {
+            rotateDiv.style.display = "none";
+          }
+        });
+      }
+
+      // Handle iOS vs others
+      function init() {
+        if (
+          typeof DeviceOrientationEvent !== "undefined" &&
+          typeof DeviceOrientationEvent.requestPermission === "function"
+        ) {
+          // iOS: show tap-to-start overlay
+          tapToStart.style.display = "flex";
+          tapToStart.addEventListener("click", () => {
+            DeviceOrientationEvent.requestPermission()
+              .then((state) => {
+                if (state === "granted") {
+                  tapToStart.style.display = "none";
+                  startOrientationCheck();
+                } else {
+                  tapToStart.innerText = "Permission denied";
+                }
+              })
+              .catch((err) => {
+                tapToStart.innerText = "Error: " + err;
+              });
+          });
+        } else {
+          // Android or others: can start immediately
+          startOrientationCheck();
+        }
+      }
+
+      window.addEventListener("load", init);
+    </script> -->
+
+
+
+
+  <!-- <div class="rotate">Rotate your device please</div>
+    <div id="tapToStart">Tap to Start</div> -->
+
